@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 namespace Shouldly
 {
     [DebuggerStepThrough]
-    [ShouldlyMethods]
+    [ShouldlyMethods]   
     public static partial class Should
     {
         public static TException Throw<TException>([InstantHandle] Action actual) where TException : Exception
