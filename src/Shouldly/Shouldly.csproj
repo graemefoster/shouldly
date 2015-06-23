@@ -64,6 +64,8 @@
     <Compile Include="DifferenceHighlighting\DifferenceIndexConsolidator.cs" />
     <Compile Include="DifferenceHighlighting\StringDifferenceHighlighter.cs" />
     <Compile Include="Internals\ShouldThrowAssertionContext.cs" />
+    <Compile Include="ShouldStaticClasses\MaybeShould.cs" />
+    <Compile Include="ShouldlyExtensionMethods\ShouldBeLike\ShouldBeLikeTestExtensions.cs" />
     <Compile Include="ShouldlyExtensionMethods\ShouldBe\StringContainsTestExtensions.cs" />
     <Compile Include="ShouldlyExtensionMethods\ShouldBe\StringNullOrEmptyTestExtensions.cs" />
     <Compile Include="ShouldlyExtensionMethods\ShouldBe\StringStartEndTestExtensions.cs" />

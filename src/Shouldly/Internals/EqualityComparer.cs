@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ExpressionToString;
 using NUnit.Framework.Constraints;
+using Shouldly.ShouldlyExtensionMethods.ShouldBeLike;
 
 namespace Shouldly
 {
@@ -91,6 +93,12 @@ namespace Shouldly
                     if (!equalityComparer.Equals(enumeratorX.Current, enumeratorY.Current))
                         return false;
                 }
+            }
+
+            //is the expected an anonymous? If so, call ShouldBeLike on them
+            if (ExpressionStringBuilder.CheckIfAnonymousType(y.GetType()))
+            {
+                return y.IsLike(x);
             }
 
             // Last case, rely on Object.Equals

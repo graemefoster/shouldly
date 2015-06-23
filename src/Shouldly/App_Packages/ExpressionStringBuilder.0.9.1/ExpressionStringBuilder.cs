@@ -94,7 +94,7 @@ namespace ExpressionToString
             return node;
         }
 
-        private static bool CheckIfAnonymousType(Type type)
+        internal static bool CheckIfAnonymousType(Type type)
         {
             // hack: the only way to detect anonymous types right now
             var isDefined = type.IsDefined(typeof(CompilerGeneratedAttribute), false);
